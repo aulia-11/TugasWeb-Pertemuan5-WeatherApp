@@ -22,9 +22,6 @@ const searchHistory = document.getElementById("searchHistory");
 let currentTemperature = null;
 let currentUnit = "celsius";
 
-/* =========================
-   FETCH WEATHER DATA
-========================= */
 
 const getWeather = async (city) => {
 
@@ -66,9 +63,6 @@ const getWeather = async (city) => {
     }
 };
 
-/* =========================
-   DISPLAY WEATHER
-========================= */
 
 const displayWeather = (data) => {
 
@@ -98,9 +92,6 @@ const displayWeather = (data) => {
         `${data.wind.speed} m/s`;
 };
 
-/* =========================
-   LOADING
-========================= */
 
 const showLoading = () => {
 
@@ -116,9 +107,6 @@ const hideLoading = () => {
 
 };
 
-/* =========================
-   ERROR
-========================= */
 
 const showError = (message) => {
 
@@ -130,9 +118,6 @@ const showError = (message) => {
 
 };
 
-/* =========================
-   SEARCH
-========================= */
 
 searchForm.addEventListener("submit", (event) => {
 
@@ -153,9 +138,6 @@ searchForm.addEventListener("submit", (event) => {
 
 });
 
-/* =========================
-   TEMPERATURE TOGGLE
-========================= */
 
 celsiusBtn.addEventListener("click", () => {
 
@@ -192,9 +174,6 @@ fahrenheitBtn.addEventListener("click", () => {
 
 });
 
-/* =========================
-   LOCAL STORAGE
-========================= */
 
 const saveToHistory = (city) => {
 
@@ -223,9 +202,6 @@ const saveToHistory = (city) => {
 
 };
 
-/* =========================
-   DISPLAY HISTORY
-========================= */
 
 const displayHistory = () => {
 
@@ -264,9 +240,5 @@ const displayHistory = () => {
         });
 
 };
-
-/* =========================
-   INITIALIZE
-========================= */
 
 displayHistory();
